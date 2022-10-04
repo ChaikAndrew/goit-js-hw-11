@@ -5,14 +5,47 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search Images</title>
+        
     </head>
     <body>
+        
         <form class="search-form" id="search-form">
-            <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+            <div class="input-container">
+                <input class="input-form" type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
             <button type="submit">Search</button>
+            </div>
+
+<!-- Разметка переключателя темы -->
+<div class="theme-switch">
+    <svg class="theme-switch__icon" role="img" aria-label="Иконка солнца">
+      <use href="./images/sprite.svg#sun"></use>
+    </svg>
+
+    <div class="theme-switch__control">
+      <input
+        class="theme-switch__toggle"
+        type="checkbox"
+        name="theme"
+        id="theme-switch-toggle"
+        aria-label="Переключить между тёмной и светлой темой"
+      />
+      <label
+        aria-hidden="true"
+        class="theme-switch__track"
+        for="theme-switch-toggle"
+      >
+      </label>
+      <div aria-hidden="true" class="theme-switch__marker"></div>
+    </div>
+
+    <svg class="theme-switch__icon" aria-label="Иконка луны">
+      <use href="./images/sprite.svg#moon"></use>
+    </svg>
+  </div>
         </form>
         <div class="gallery"></div>
         <button type="button" class="load-more is-hidden" >Load more</button>
+        
         <script src="./index.js" type="module"></script>
     </body>
 </html>
